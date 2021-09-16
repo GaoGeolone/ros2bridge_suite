@@ -15,4 +15,4 @@ Contributors
 
 Maintainer for this project
 ------------
- * [Gao Geolone]  (gaojialong@nudt.edu.cn)
+ * Gao Geolone  (gaojialong@nudt.edu.cn)
