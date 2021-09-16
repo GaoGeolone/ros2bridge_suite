@@ -45,7 +45,7 @@ add this package suite to your ROS2 projects workspace's src document
 colcon build
 ```
 if On Windows
-```bash
+```cmd
 call install\setup.bat  
 ```
 if on Ubuntu
