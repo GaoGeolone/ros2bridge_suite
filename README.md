@@ -27,7 +27,7 @@ A rosbridge client is a program that communicates with rosbridge using its JSON 
  * [jrosbridge](https://github.com/WPI-RAIL/jrosbridge) - A Java API, which communicates with rosbridge over WebSockets.
  * [roslibpy](https://github.com/gramaziokohler/roslibpy) - A Python API, which communicates with rosbridge over WebSockets.
 
- * [ROS-Integration](https://github.com/gramaziokohler/roslibpy) - A UnrealEngine 5 plugin, which communicates with rosbridge over TCP server.
+ * [ROS-Integration](https://github.com/gramaziokohler/roslibpy) - An UnrealEngine 5 plugin, which communicates with rosbridge over TCP server.
 
 ### License
 ros2bridge is inherited from [rosbridge_suit](https://github.com/RobotWebTools/rosbridge_suite) so it will also released with a BSD license. For full terms and conditions, see the [LICENSE](LICENSE) file.
