@@ -38,3 +38,24 @@ See the [AUTHORS](AUTHORS.md) file for a full list of contributors.
 ### Troubleshooting
 
 See the [TROUBLESHOOTING](TROUBLESHOOTING.md) doc for common problems and solutions.
+
+### Guidance
+add this package suite to your ROS2 projects workspace's src document
+```bash
+colcon build
+```
+if On Windows
+```bash
+call install\setup.bat  
+```
+if on Ubuntu
+```bash
+source install\setup.sh
+```
+to launch the isolate package nodes
+```bash
+ros2 launch rosbridge_server rosbridge_tcp_launch.xml
+```
+
+
+
