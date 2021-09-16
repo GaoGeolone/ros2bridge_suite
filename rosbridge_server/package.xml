@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rosbridge_server</name>
+  <version>0.1.0</version>
+  <description>A TCP Server(Websocket part keeps update with https://github.com/RobotWebTools/rosbridge_suite) interface to rosbridge. And it is aimed at application on windows10 with Ros2 on it</description>
+  <maintainer email="gaojialong@nudt.edu.cn">Gao Geolone</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/rosbridge_server</url>
+  <url type="bugtracker">https://github.com/RobotWebTools/rosbridge_suite/issues</url>
+  <url type="repository">https://github.com/RobotWebTools/rosbridge_suite</url>
+
+  <OriginAuthor email="jonathan.c.mace@gmail.com">Jonathan Mace</OriginAuthor>
+  <Originmaintainer email="jihoonlee.in@gmail.com">Jihoon Lee</Originmaintainer>
+  <Originmaintainer email="jacob@foxglove.dev">Jacob Bandes-Storch</Originmaintainer>
+
+
+
+  <exec_depend>rosbridge_library</exec_depend>
+  <exec_depend>rosbridge_msgs</exec_depend>
+  <exec_depend>rosapi</exec_depend>
+  
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
