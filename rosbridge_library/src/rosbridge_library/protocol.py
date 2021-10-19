@@ -138,7 +138,7 @@ class Protocol:
         try:
             # print("try to deserialize")
             msg = self.deserialize(self.buffer_bytes) if self.bson_only_mode else self.deserialize(self.buffer_str)
-            print('deserialize data:', msg)
+            # print('deserialize data:', msg)
             if self.bson_only_mode:
                 self.buffer_bytes = bytes()
             else:
@@ -329,8 +329,8 @@ class Protocol:
         Returns a dictionary of values
 
         """
-        print("listening for test, remember to delete before release")
-        print(msg) #remember to delete before release
+        # print("listening for test, remember to delete before release")
+        # print(msg) #remember to delete before release
         try:
             if self.bson_only_mode:
                 bson_message = bson.BSON(msg)

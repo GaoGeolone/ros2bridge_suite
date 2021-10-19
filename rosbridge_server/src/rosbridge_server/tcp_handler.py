@@ -79,7 +79,6 @@ class RosbridgeTcpSocket(SocketServer.BaseRequestHandler):
         # print("msglen:",msglen)
         # Retrieve the rest of the message
         data = self.recvall(msglen - BSON_LENGTH_IN_BYTES)
-        # print("Bson data", data, "Len", len(data),'data_type', type(data))
         if data is None:
             return None
         data = raw_msglen + data # Prefix the data with the message length that has already been received.
