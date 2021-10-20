@@ -46,6 +46,7 @@ class RosbridgeTcpSocket(SocketServer.BaseRequestHandler):
         }
         try:
             self.protocol = RosbridgeProtocol(cls.client_id_seed, cls.ros_node, parameters=parameters)
+            print("send function:", cls.send_message)
             self.protocol.outgoing = self.send_message
             self.protocol.parameters = self.parameters
             cls.client_id_seed += 1
@@ -133,4 +134,5 @@ class RosbridgeTcpSocket(SocketServer.BaseRequestHandler):
         """
         Callback from rosbridge
         """
+        print("send msg:", message)
         self.request.sendall(message)
