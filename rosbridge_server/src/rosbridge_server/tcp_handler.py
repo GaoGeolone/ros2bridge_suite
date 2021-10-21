@@ -109,7 +109,7 @@ class RosbridgeTcpSocket(SocketServer.BaseRequestHandler):
               data = self.request.recv(cls.incoming_buffer)
               # Exit on empty string
               # add spin to disposal of callback 
-              rclpy.spin_once(self.ros_node, timeout_sec=0.001)
+              rclpy.spin_once(self.ros_node, timeout_sec=0.01)
               if data.strip() == '':
                   break
               elif len(data.strip()) > 0:

@@ -33,6 +33,8 @@
 
 from threading import Lock
 
+from rclpy.qos import qos_profile_system_default
+
 from rosbridge_library.internal import ros_loader
 from rosbridge_library.internal.message_conversion import msg_class_type_repr
 from rosbridge_library.internal.topics import TopicNotEstablishedException
@@ -42,6 +44,10 @@ from rosbridge_library.internal.outgoing_message import OutgoingMessage
 """ Manages and interfaces with ROS Subscriber objects.  A single subscriber
 is shared between multiple clients
 """
+#######
+import functools
+print = functools.partial(print, flush=True)
+#######
 
 class MultiSubscriber():
     """ Handles multiple clients for a single subscriber.
@@ -105,7 +111,8 @@ class MultiSubscriber():
         self.msg_class = msg_class
         self.node_handle = node_handle
         # TODO(@jubeira): add support for other QoS.
-        self.subscriber = node_handle.create_subscription(msg_class, topic, self.callback, 10, raw=raw)
+        self.subscriber = node_handle.create_subscription(msg_class, topic, self.callback, qos_profile_system_default, raw=raw)
+        print("successfully create subscriber:", self.subscriber)
         self.new_subscriber = None
         self.new_subscriptions = {}
 
@@ -176,6 +183,8 @@ class MultiSubscriber():
         callbacks - subscriber callbacks to invoke
 
         """
+        print("call back", msg)
+
         outgoing = OutgoingMessage(msg)
 
         # Get the callbacks to call
